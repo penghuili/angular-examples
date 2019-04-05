@@ -2,7 +2,21 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "outDir": "../out-tsc/app",
-    "types": []
+    "types": ["node"],
+    "paths": {
+      "globalize": [
+        "node_modules/globalize/dist/globalize"
+      ],
+      "globalize/*": [
+        "node_modules/globalize/dist/globalize/*"
+      ],
+      "cldr": [
+        "node_modules/cldrjs/dist/cldr"
+      ],
+      "cldr/*": [
+        "node_modules/cldrjs/dist/cldr/*"
+      ]
+    },
   },
   "exclude": [
     "test.ts",
