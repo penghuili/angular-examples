@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { OnPushComponent } from './on-push/on-push.component';
+import { OnPushModule } from './on-push/on-push.module';
 import { ViewChildModule } from './view-child/view-child.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    OnPushComponent,
   ],
   imports: [
     BrowserModule,
     ViewChildModule,
+    OnPushModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
