@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { OnPushComponent } from './on-push/on-push.component';
+import { ViewChildModule } from './view-child/view-child.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { OnPushComponent } from './on-push/on-push.component';
     OnPushComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ViewChildModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
