@@ -1,0 +1,15 @@
+.mst-wrapper {
+  margin: 0 auto;
+  max-width: 30rem;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+}
+.mst-link {
+  padding: 0.5rem;
+}
+.mst-link--active {
+  color: #9932CC;
+}

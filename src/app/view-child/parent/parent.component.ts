@@ -3,7 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'mst-parent',
   template: `
-    <mst-child-wrapper *ngIf="showChild"></mst-child-wrapper>
+    child should be shown in 1 second, and also check console.
+    <div>
+      <mst-child-wrapper *ngIf="showChild"></mst-child-wrapper>
+    </div>
   `,
   styles: ['']
 })

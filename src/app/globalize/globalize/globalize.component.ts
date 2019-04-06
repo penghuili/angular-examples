@@ -23,7 +23,7 @@ Globalize.load(
 
 @Component({
   selector: 'mst-globalize',
-  template: '{{ parsed }}',
+  template: 'In German 100,5 is {{ parsed }}',
   styles: ['']
 })
 export class GlobalizeComponent implements OnInit {
