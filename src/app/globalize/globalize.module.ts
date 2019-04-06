@@ -10,8 +10,5 @@ import { GlobalizeComponent } from './globalize/globalize.component';
     CommonModule,
     GlobalizeRoutingModule,
   ],
-  exports: [
-    GlobalizeComponent,
-  ]
 })
 export class GlobalizeModule { }

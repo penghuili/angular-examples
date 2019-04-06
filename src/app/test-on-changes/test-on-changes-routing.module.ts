@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { OnChangesParentComponent } from './on-changes-parent/on-changes-parent.component';
+
+const routes: Routes = [
+  {
+    path: 'test-on-changes',
+    component: OnChangesParentComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

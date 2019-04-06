@@ -16,8 +16,5 @@ import { ViewChildRoutingModule } from './view-child-routing.module';
     ParentComponent,
     ChildWrapperComponent,
   ],
-  exports: [
-    ParentComponent,
-  ]
 })
 export class ViewChildModule { }

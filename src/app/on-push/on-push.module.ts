@@ -12,8 +12,5 @@ import { OnPushComponent } from './on-push/on-push.component';
   declarations: [
     OnPushComponent,
   ],
-  exports: [
-    OnPushComponent,
-  ]
 })
 export class OnPushModule { }
