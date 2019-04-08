@@ -15,6 +15,6 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-const context = require.context('./', true, /on-changes-child.component\.spec\.ts$/);
+const context = require.context('./', true, /material-table.component\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);

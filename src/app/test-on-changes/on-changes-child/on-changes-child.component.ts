@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Input, OnChanges } from '@angular/c
 @Component({
   selector: 'mst-on-changes-child',
   templateUrl: './on-changes-child.component.html',
-  styleUrls: ['./on-changes-child.component.sass'],
+  styleUrls: ['./on-changes-child.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OnChangesChildComponent implements OnChanges {
