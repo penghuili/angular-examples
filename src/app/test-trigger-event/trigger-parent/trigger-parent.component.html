@@ -1,0 +1,19 @@
+<div class="mst-trigger-parent-block">
+  <div>click event:</div>
+  <button (click)="clickButton()">click me</button>
+  <span class="mst-click-count">{{ clickCount }}</span>
+</div>
+
+<div class="mst-trigger-parent-block">
+  <div>input event:</div>
+  <input type="text" [formControl]="formControl"
+    (focus)="focusInput()"/>
+  <div class="mst-focus-count">focus count: {{ focusCount }}</div>
+  <div class="mst-input-value">input value: {{ inputValue }}</div>
+</div>
+
+<div class="mst-trigger-parent-block">
+  <div>child component event:</div>
+  <mst-trigger-child (newNumber)="handleNewNumber($event)"></mst-trigger-child>
+  <div class="mst-child-count">child count: {{ childCount }}</div>
+</div>
