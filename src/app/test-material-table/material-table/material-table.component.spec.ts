@@ -25,10 +25,12 @@ describe('MaterialTableComponent', () => {
   it('should has correct rows', () => {
     fixture.detectChanges();
     
+    // query debug elements doesn't work
     const rowDebugElements = queryDebugElements(de, 'tbody tr');
     expect(rowDebugElements.length).toBe(0);
 
+    // has to fallback to query DOM elements
     const rowHtmlElements = de.nativeElement.querySelectorAll('tbody tr');
-    expect(rowHtmlElements.length).toBe(10);
+    expect(rowHtmlElements.length).toBe(1);
   });
 });

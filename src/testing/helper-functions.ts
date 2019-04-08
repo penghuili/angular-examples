@@ -1,6 +1,8 @@
 import { DebugElement } from '@angular/core';
 import { By } from '@angular/platform-browser';
 
+declare var expect: any;
+
 // Query elements:
 export function queryDebugElement(de: DebugElement, selector: string) {
   return de.query(By.css(selector));
