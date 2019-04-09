@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormFieldsModule } from './form-fields/form-fields.module';
 import { GlobalizeModule } from './globalize/globalize.module';
 import { OnPushModule } from './on-push/on-push.module';
 import { TestFakeAsyncModule } from './test-fake-async/test-fake-async.module';
@@ -28,6 +29,7 @@ import { ViewChildModule } from './view-child/view-child.module';
     TestFakeAsyncModule,
     TestTriggerEventModule,
     TestPropertyBasedModule,
+    FormFieldsModule,
 
     AppRoutingModule
   ],

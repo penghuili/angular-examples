@@ -1,0 +1,10 @@
+<mat-form-field class="mst-input-field"
+  [appearance]="'outline'"
+  [floatLabel]="label ? 'auto': 'never'">
+  <mat-label *ngIf="label">{{ label }}</mat-label>
+  <input matInput
+    [type]="type"
+    [name]="name"
+    [placeholder]="placeholder"
+    [formControl]="controller">
+</mat-form-field>

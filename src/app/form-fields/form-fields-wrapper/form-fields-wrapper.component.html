@@ -1,0 +1,10 @@
+<form [formGroup]="form">
+  <div>
+    <div>input field:</div>
+    <mst-input-field
+      [label]="'input field'"
+      [name]="'mst-input'"
+      [placeholder]="'type something'"
+      [controller]="form.get('input')"></mst-input-field>
+  </div>
+</form>
