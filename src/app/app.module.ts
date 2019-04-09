@@ -9,6 +9,7 @@ import { OnPushModule } from './on-push/on-push.module';
 import { TestFakeAsyncModule } from './test-fake-async/test-fake-async.module';
 import { TestMaterialTableModule } from './test-material-table/test-material-table.module';
 import { TestOnChangesModule } from './test-on-changes/test-on-changes.module';
+import { TestPropertyBasedModule } from './test-property-based/test-property-based.module';
 import { TestTriggerEventModule } from './test-trigger-event/test-trigger-event.module';
 import { ViewChildModule } from './view-child/view-child.module';
 
@@ -26,6 +27,7 @@ import { ViewChildModule } from './view-child/view-child.module';
     TestMaterialTableModule,
     TestFakeAsyncModule,
     TestTriggerEventModule,
+    TestPropertyBasedModule,
 
     AppRoutingModule
   ],
