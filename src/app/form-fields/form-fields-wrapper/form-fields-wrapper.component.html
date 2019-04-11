@@ -1,10 +1,18 @@
-<form [formGroup]="form">
+<form [formGroup]="formGroup">
   <div>
-    <div>input field:</div>
     <mst-input-field
       [label]="'input field'"
       [name]="'mst-input'"
       [placeholder]="'type something'"
-      [controller]="form.get('input')"></mst-input-field>
+      [controller]="formGroup.get('input')"
+      [errors]="inputErrors"></mst-input-field>
+  </div>
+  <div>
+    <mst-input-field
+      [label]="'input field 2'"
+      [name]="'mst-input-2'"
+      [placeholder]="'type something'"
+      [controller]="formGroup.get('input2')"
+      [errors]="input2Errors"></mst-input-field>
   </div>
 </form>

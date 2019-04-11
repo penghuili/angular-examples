@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { FormError } from '../input-field/input-field.component';
+import { notSame } from '../validators';
 
 @Component({
   selector: 'mst-form-fields-wrapper',
@@ -7,11 +10,37 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./form-fields-wrapper.component.scss']
 })
 export class FormFieldsWrapperComponent implements OnInit {
-  form: FormGroup;
+  formGroup: FormGroup;
+
+  inputErrors: FormError[] = [
+    {
+      type: 'required',
+      message: 'Required'
+    },
+    {
+      type: 'maxlength',
+      message: 'Max length is: {requiredLength}, your actual length: {actualLength}.'
+    }
+  ];
+  input2Errors: FormError[] = [
+    {
+      type: 'required',
+      message: 'Required'
+    },
+    {
+      type: 'input2IsSameAsInput',
+      message: 'This can\'t be the same as the previous input.'
+    }
+  ];
 
   constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      input: [''],
+    this.formGroup = this.fb.group({
+      input: ['', [Validators.required, Validators.maxLength(2)]],
+      input2: ['', [Validators.required]],
+    }, {
+      validator: Validators.compose([
+        notSame('input', 'input2')
+      ])
     });
   }
 
