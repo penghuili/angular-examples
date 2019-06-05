@@ -23,17 +23,19 @@ Globalize.load(
 
 @Component({
   selector: 'mst-globalize',
-  template: 'In German 100,5 is {{ parsed }}',
+  template: 'In German {{ num }} is {{ parsed }}',
   styles: ['']
 })
 export class GlobalizeComponent implements OnInit {
   parsed: number;
   
-  private num = '100,5';
+  num = '1.0.0,59';
 
   ngOnInit() {
     Globalize.locale('de');
-    this.parsed = Globalize.parseNumber(this.num);
+    const thousandSeparator = Globalize.cldr.main("numbers/symbols-numberSystem-latn/group");
+    const replaced = this.num.replace(new RegExp(`\\${thousandSeparator}`, 'g'), '');
+    this.parsed = Globalize.parseNumber(replaced);
   }
 
 }
